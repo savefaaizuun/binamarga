@@ -1,0 +1,73 @@
+/*
+Bootstrap 3.1 overrides from http://bootply.com
+This CSS code should follow the 'bootstrap.css'
+in your HTML file.
+license: MIT
+author: bootply.com
+*/
+<style>
+
+               
+        #header{
+        width: 100%;
+        background: #153A4D;
+        }
+        .navbar {
+            border-radius: 0px;
+        }
+        .navbar-default {
+        background-color: #153A4D;
+        border: none;
+        margin-bottom: 0px;"
+        }
+        .navbar-default .navbar-nav > li > a {
+        color: #FFF;
+        text-align: center;
+        }
+        a {
+        color: #53B1EC;
+        text-decoration: none;
+        }
+        #main-content{
+        width: 100%;
+        background: rgba(69, 168, 189, 0.64) none repeat scroll 0% 0%;
+        }
+        
+        #content{
+        width: 100%;
+        background: #FFFFFF;
+        }
+        .img-thumbnail{
+        width: 225px; height: 125px;
+        margin: 20px auto;
+        }
+        #footer{
+        width: 100%;
+        background: #153A4D;
+        color: #53B1EC;
+        text-align:left;
+        font-size:16px;
+        font-family:tahoma;
+        padding: 20px 20px;
+        }
+        .h5, h5 {
+        font-size: 16px;
+        color: #FFF;
+        font-weight: bold;
+        }
+        .h6, h6 {
+        font-size: 14px;
+        color: #FFF;
+        }
+        .row {
+        margin-right: 0px;
+        margin-left: 0px;
+        }
+        .col-xs-4 {
+        position: relative;
+        min-height: 1px;
+        padding-right: 0px;
+        padding-left: 0px;
+        }
+
+</style>

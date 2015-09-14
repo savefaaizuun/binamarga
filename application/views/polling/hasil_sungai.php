@@ -156,19 +156,19 @@ padding: 2% 5%;
 				<div class="col-md-12">
 					<h4 class="ikm">SANGAT BAIK</h4>
 					<div class="progress">
-						<div data-percentage="0%" style="width: <?php echo $jawabansungai_d; ?>%;" class="progress-bar progress-bar-pju" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+						<div data-percentage="0%" style="width: <?php echo $jawabansungai_d; ?>%;" class="progress-bar progress-bar-sungai" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
 					</div>
 					<h4 class="ikm">BAIK</h4>
 					<div class="progress">
-						<div data-percentage="0%" style="width: <?php echo $jawabansungai_c; ?>%;" class="progress-bar progress-bar-pju" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+						<div data-percentage="0%" style="width: <?php echo $jawabansungai_c; ?>%;" class="progress-bar progress-bar-sungai" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
 					</div>
 					<h4 class="ikm">CUKUP BAIK</h4>
 					<div class="progress">
-						<div data-percentage="0%" style="width: <?php echo $jawabansungai_b; ?>%;" class="progress-bar progress-bar-pju" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+						<div data-percentage="0%" style="width: <?php echo $jawabansungai_b; ?>%;" class="progress-bar progress-bar-sungai" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
 					</div>
 					<h4 class="ikm">KURANG BAIK</h4>
 					<div class="progress">
-						<div data-percentage="0%" style="width: <?php echo $jawabansungai_a; ?>%;" class="progress-bar progress-bar-pju" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+						<div data-percentage="0%" style="width: <?php echo $jawabansungai_a; ?>%;" class="progress-bar progress-bar-sungai" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
 					</div>
 				</div>
 				<br>

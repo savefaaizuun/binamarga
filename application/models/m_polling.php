@@ -26,7 +26,7 @@
 
         function getKuisionerJalan(){
 
-            $sql = "SELECT * FROM tabel_kuisioner WHERE kategori_id=1";
+            $sql = "SELECT * FROM dbmp_kuisioner WHERE kategori_id=1";
             $result = $this->db->query($sql);
             $this->firephp->log($this->db->last_query());
             return $result;      
@@ -34,7 +34,7 @@
 
         function getKuisionerPju(){
 
-            $sql = "SELECT * FROM tabel_kuisioner WHERE kategori_id=2";
+            $sql = "SELECT * FROM dbmp_kuisioner WHERE kategori_id=2";
             $result = $this->db->query($sql);
             $this->firephp->log($this->db->last_query());
             return $result;      
@@ -42,7 +42,7 @@
 
         function getKuisionerDrain(){
 
-            $sql = "SELECT * FROM tabel_kuisioner WHERE kategori_id=3";
+            $sql = "SELECT * FROM dbmp_kuisioner WHERE kategori_id=3";
             $result = $this->db->query($sql);
             $this->firephp->log($this->db->last_query());
             return $result;      
@@ -50,7 +50,7 @@
 
         function getKuisionerSungai(){
 
-            $sql = "SELECT * FROM tabel_kuisioner WHERE kategori_id=4";
+            $sql = "SELECT * FROM dbmp_kuisioner WHERE kategori_id=4";
             $result = $this->db->query($sql);
             $this->firephp->log($this->db->last_query());
             return $result;      
@@ -59,7 +59,7 @@
         
         function getJawaban(){
 
-            $sql = "SELECT * FROM tabel_jawaban";
+            $sql = "SELECT * FROM dbmp_jawaban";
             $result = $this->db->query($sql);
             $this->firephp->log($this->db->last_query());
             return $result;      
@@ -73,50 +73,6 @@
         function update($id,$info){
             $this->db->where("polling_id",$id);
             $this->db->update("dbmp_polling",$info);
-        }
-
-       
-
-        function getQuestionJalanid($id){
-
-            $sql = "SELECT * FROM dbmp_question WHERE question_id= $id AND category_id=1";
-            $result = $this->db->query($sql);
-            $this->firephp->log($this->db->last_query());
-            return $result;      
-        }
-
-        function getQuestionPjuid($id){
-
-            $sql = "SELECT * FROM dbmp_question WHERE question_id= $id AND category_id=2";
-            $result = $this->db->query($sql);
-            $this->firephp->log($this->db->last_query());
-            return $result;      
-        }
-
-        function getQuestionDrainid($id){
-
-            $sql = "SELECT * FROM dbmp_question WHERE question_id= $id AND category_id=3";
-            $result = $this->db->query($sql);
-            $this->firephp->log($this->db->last_query());
-            return $result;      
-        }
-
-        function getQuestionSungaiid($id){
-
-            $sql = "SELECT * FROM dbmp_question WHERE question_id= $id AND category_id=4";
-            $result = $this->db->query($sql);
-            $this->firephp->log($this->db->last_query());
-            return $result;      
-        }
-
-      
-        function getAnswer($cat_answer_id){
-
-            //$cat_answer_id = $this->uri->segment(3);
-            $sql = "SELECT * FROM dbmp_answer WHERE cat_answer_id=".$cat_answer_id;
-            $result = $this->db->query($sql);
-            $this->firephp->log($this->db->last_query());
-            return $result;      
         }
 
         function getAllVoter(){
@@ -138,46 +94,7 @@
             return $result;      
         }
 
-        public function addVote($data){
-
-            $this->db->insert('dbmp_polling', $data);
-            
-        }
-
-        function getJalanAvg(){
-
-            $query = "SELECT AVG(answer_id) FROM dbmp_polling INNER JOIN dbmp_question ON dbmp_polling.question_id = dbmp_question.question_id WHERE category_id=1";
-            $result = $this->db->query($query);
-            //$result = mysql_query($query) or die(mysql_error());
-            return $result;
-            
-
-            //$cat_answer_id = $this->uri->segment(3);
-            /*$sql = "SELECT AVG(answer_id) FROM dbmp_polling";
-            $result = $this->db->query($sql);
-            $this->firephp->log($this->db->last_query());
-            return $result;  */    
-        }
-
-        function getPjuAvg(){
-            $query = "SELECT AVG(answer_id) FROM dbmp_polling INNER JOIN dbmp_question ON dbmp_polling.question_id = dbmp_question.question_id WHERE category_id=2";
-            $result = $this->db->query($query);
-            //$result = mysql_query($query) or die(mysql_error());
-            return $result;
-        }
-
-        function getDrainAvg(){
-            $query = "SELECT AVG(answer_id) FROM dbmp_polling INNER JOIN dbmp_question ON dbmp_polling.question_id = dbmp_question.question_id WHERE category_id=3";
-            $result = $this->db->query($query);
-            //$result = mysql_query($query) or die(mysql_error());
-            return $result;
-        }
-        function getSungaiAvg(){
-            $query = "SELECT AVG(answer_id) FROM dbmp_polling INNER JOIN dbmp_question ON dbmp_polling.question_id = dbmp_question.question_id WHERE category_id=4";
-            $result = $this->db->query($query);
-            //$result = mysql_query($query) or die(mysql_error());
-            return $result;
-        }
+       
 
         function getCountPolling(){
             $query = "SELECT COUNT(polling_id) as polling FROM dbmp_polling";

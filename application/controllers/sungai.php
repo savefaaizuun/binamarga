@@ -166,7 +166,7 @@ class Sungai extends CI_Controller {
             
             $data['message_edit']="<div class='alert alert-success'>Data Berhasil diupdate</div>";
             
-            redirect('polling/hasil_drainase', $data);
+            redirect('polling/hasil_sungai', $data);
         }else{
 
             $data['title'] = "Polling Sungai";
